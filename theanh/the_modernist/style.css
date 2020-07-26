@@ -224,9 +224,9 @@ li a:hover {
 
 #div_2_3 {
     max-width: 960px;
+    height: 430px;
     margin: 0 auto;
     margin-top: 30px;
-    height: 430px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -269,6 +269,7 @@ li a:hover {
 
 .d_2_3:hover {
     cursor: pointer;
+    border: 5px solid #76c38f;
 }
 
 .d_2_3:hover .p_2_3 {
