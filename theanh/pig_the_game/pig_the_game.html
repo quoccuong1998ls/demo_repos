@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="pig_style.css">
+    <script src="pig_script.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div id="div_1" class="div_player">
+            <p id="name_1" class="p_name">
+                PLAYER 1
+                <span id="turn_1" class="dot_turn"></span>
+            </p>
+            <p id="score_1" class="p_score">0</p>
+
+            <div class="div_current">
+                <p class="p_current">CURRENT</p>
+                <p id="total_1" class="p_total">0</p>
+            </div>
+
+        </div>
+
+        <div id="div_2" class="div_player">
+            <p id="name_2" class="p_name">
+                PLAYER 2
+                <span id="turn_2" class="dot_turn"></span>
+            </p>
+            <p id="score_2" class="p_score">0</p>
+
+            <div class="div_current">
+                <p class="p_current">CURRENT</p>
+                <p id="total_2" class="p_total">0</p>
+            </div>
+        </div>
+
+        <p id="new_game" class="controller" onclick="newGame()">
+            <i class="material-icons">add_circle_outline</i>
+            NEW GAME
+        </p>
+
+        <p id="roll" class="controller" onclick="rollDice()">
+            <i class="material-icons">sync</i>
+            ROLL DICE
+        </p>
+
+        <p id="hold" class="controller" onclick="hold()">
+            <i class="material-icons">move_to_inbox</i>
+            HOLD
+        </p>
+
+        <div id="dice">
+            <span id="dot_dice_1" class="dot_dice dot_dice_1_7"></span>
+            <span id="dot_dice_2" class="dot_dice dot_dice_2_6"></span>
+            <span id="dot_dice_3" class="dot_dice dot_dice_3_5"></span>
+            <span id="dot_dice_4" class="dot_dice"></span>
+            <span id="dot_dice_5" class="dot_dice dot_dice_3_5"></span>
+            <span id="dot_dice_6" class="dot_dice dot_dice_2_6"></span>
+            <span id="dot_dice_7" class="dot_dice dot_dice_1_7"></span>
+        </div>
+
+        <div id="overlay"></div>
+
+        <div id="div_win">
+            <p id="p_win"></p>
+            <p id="time_out">New game will start in 5s</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
