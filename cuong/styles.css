@@ -6,11 +6,13 @@
     padding-top: 0px;
 }
 .top2{
-
+    padding-right: 120px;
+    padding-left: 120px;
     color: white;
-    margin-top: 90px;
     margin-bottom: 130px;
-    display: flex;
+}
+.top2 > *{
+    vertical-align: middle;
 }
 /* .top2-text{
     border-radius: 10%;
@@ -30,8 +32,8 @@
     height: 5px;
 } */
 .texttext{
-   
-    padding-left: -20px;
+    display: inline-block;
+    width:380px;
 }
 .text11{
   
@@ -45,26 +47,26 @@
     padding-top: -30px;
     padding-left: 180px;
     width: 319px;
-height: 74px;
-font-size: 12px;
-line-height: 19px;
-color: #979797;
-font-family: "Georgia";
+    height: 74px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #979797;
+    font-family: "Georgia";
 }
 .button1{
-    margin-left: 60px; 
+    padding-top: 5px;
+    margin-left: 55px; 
     background-color:#290000; 
     border: 0px;
     color: white;
 }
 .button1:hover{
-    
+    padding: 3px;
     border-radius: 5px;
     background-color: #76c38f;
 }
 .icon{
-    margin-left: 120px;
-    margin-top: 150px;
+    display:inline-block;
     width: 15px;
     height: 27px;
     font-size: 25px;
@@ -74,21 +76,23 @@ font-family: "Georgia";
     cursor: pointer;
 }
 .icon1{
-    padding-right: 120px;
-    margin-top: 150px;
     width: 15px;
     height: 27px;
     font-size: 25px;
+    padding-left: 30px;
     color:#76c38f;
+    display:inline-block;
+    text-align: right;
 }
 .icon1:hover{
     cursor: pointer;
 }
 .image{
+
+    width: 430px;
     display: inline-block; 
-    vertical-align: middle;
-    margin-right: 180px;
-    margin-top: 125px;
+    padding-top: 70px;
+    padding-left: 70px;
 }
 .mid {
     text-align: center;
@@ -114,32 +118,29 @@ font-family: "Georgia";
     background-color: #303030;
 }
 #a1 {
-    display: inline-block;
-    text-align: left;
     padding-left: 120px;
     font-size: 20px;
     line-height: 28px;
     color: #ffffff;
     font-family: "Georgia";
+    float: left;
 }
 
 .menu {
     padding-top: 30px;
-    display: inline-block;
     text-align: center;
 }
-
-.menuli {
-    padding-right: 30px;
+ul li {
+    display: inline-table;
     color: white;
-    width: 140px;
-    height: 40px;
+
 }
 
 .menu a {
     
-    font-size: 16px;
-    line-height: 16px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 10px;
     color: #ffffff;
     font-family: "Georgia";
     text-decoration: none;
@@ -148,8 +149,10 @@ font-family: "Georgia";
 
 .menu a:hover {
     height: 35px;
+    width: 78px;
+    padding: 5px;
     background-color: #76c38f;
-    border-radius: 5px;
+    border-radius: 11px;
     
 }
 
@@ -213,17 +216,19 @@ a {
 
 
 .box-item1 {
-    width: 300px;
-    height: 200px;
+    width: 290px;
+    height: 190px;
     background-color: #353535;
-    margin-right: 30px;
     border: 5px solid white;
     display: block;
-    text-align: center;
 }
 
 .box-item1:hover {
     border-color: #76c38f;
+   
+}
+.box-item1:hover .rectangle1{
+    display: none;
 }
 
 .rectangle {
@@ -234,23 +239,17 @@ a {
 }
 
 .rectangle1 {
-    padding-bottom: 30px;
     width: 290px;
     height: 30px;
+    margin-top: 44px;
     background: black;
     text-align: center;
-}
-
-.rectangle1:hover {
-    opacity: 0;
-}
-
-.name {
     text-align: center;
     color: white;
-    padding-top: 20px;
 }
-
+.name{
+    padding-top: 5px;
+}
 .text {
     color: white;
     text-align: center;
@@ -259,11 +258,13 @@ a {
 
 #word {
     position: relative;
-    height: 48px;
+    color: white;
+   
+    height: 50px;
     width: 256px;
     text-align: center;
     margin-left: 472px;
-    margin-top: -40px;
+    margin-top: -60px;
     background-color: #303030;
     border-radius: 10px;
 }
@@ -288,10 +289,12 @@ a {
     margin-left: 0px;
     margin-bottom: 60px;
 }
+
 .textbox1{
     width: 225px;
     height: 35px;
     border-radius: 11px;
+    border-style: none;
     background-color: #222222;
     color: white ;
     margin: 2px;
@@ -301,6 +304,7 @@ a {
 .textbox2{
     width: 225px;
     height: 35px;
+    border-style: none;
     border-radius: 11px;
     background-color: #222222;
     color: white ;
@@ -311,6 +315,7 @@ a {
 .textbox3{
     width: 225px;
     height: 35px;
+    border-style: none;
     border-radius: 11px;
     background-color: #222222;
     color: white ;
@@ -322,6 +327,7 @@ a {
 .textbox4{
     width: 225px;
     height: 80px;
+    border-style: none;
     border-radius: 11px;
     background-color: #222222;
     color: white ;
@@ -408,4 +414,3 @@ a {
     margin: 0 auto;
     background-color:#3a3a3a;
 }
-
