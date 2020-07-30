@@ -1,0 +1,411 @@
+.top1 {
+    margin: 0 auto;
+    width: 1200px;
+    height: 605px;
+    background-color: #290000;
+    padding-top: 0px;
+}
+.top2{
+
+    color: white;
+    margin-top: 90px;
+    margin-bottom: 130px;
+    display: flex;
+}
+/* .top2-text{
+    border-radius: 10%;
+    width: 300px;
+    height: 250px;
+    margin-left: 180px;
+}
+.a-top2-text:hover{
+    width: 142px;
+    height: 35px;
+    border-radius: 11px;
+    background-color: #76c38f;
+} */
+/* .rectangletop{
+    background-color: #76c38f;
+    width: 1200px;
+    height: 5px;
+} */
+.texttext{
+   
+    padding-left: -20px;
+}
+.text11{
+  
+    padding-left: 60px;
+    font-size: 40px;
+    line-height: 46px;
+    color: #ffffff;
+    font-family: "Georgia";
+}
+.text12{
+    padding-top: -30px;
+    padding-left: 180px;
+    width: 319px;
+height: 74px;
+font-size: 12px;
+line-height: 19px;
+color: #979797;
+font-family: "Georgia";
+}
+.button1{
+    margin-left: 60px; 
+    background-color:#290000; 
+    border: 0px;
+    color: white;
+}
+.button1:hover{
+    
+    border-radius: 5px;
+    background-color: #76c38f;
+}
+.icon{
+    margin-left: 120px;
+    margin-top: 150px;
+    width: 15px;
+    height: 27px;
+    font-size: 25px;
+    color:#76c38f;
+}
+.icon:hover{
+    cursor: pointer;
+}
+.icon1{
+    padding-right: 120px;
+    margin-top: 150px;
+    width: 15px;
+    height: 27px;
+    font-size: 25px;
+    color:#76c38f;
+}
+.icon1:hover{
+    cursor: pointer;
+}
+.image{
+    display: inline-block; 
+    vertical-align: middle;
+    margin-right: 180px;
+    margin-top: 125px;
+}
+.mid {
+    text-align: center;
+    margin: 0 auto;
+    width: 1200px;
+    height: 973px;
+    background-color: #660000;
+    border-bottom: 3px solid #303030;
+}
+
+.mid1 {
+    text-align: center;
+
+    width: 1200px;
+    height: 542px;
+    background-color: #660000;
+}
+
+.bot {
+    margin: 0 auto;
+    width: 1200px;
+    height: 387px;
+    background-color: #303030;
+}
+#a1 {
+    display: inline-block;
+    text-align: left;
+    padding-left: 120px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #ffffff;
+    font-family: "Georgia";
+}
+
+.menu {
+    padding-top: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.menuli {
+    padding-right: 30px;
+    color: white;
+    width: 140px;
+    height: 40px;
+}
+
+.menu a {
+    
+    font-size: 16px;
+    line-height: 16px;
+    color: #ffffff;
+    font-family: "Georgia";
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu a:hover {
+    height: 35px;
+    background-color: #76c38f;
+    border-radius: 5px;
+    
+}
+
+.box-container {
+    width: 960px;
+    height: 305px;
+    padding-top: 60px;
+    margin-left: 120px;
+    margin-right: 120px;
+    display: flex;
+
+}
+
+.box-item {
+    height: 305px;
+    width: 225px;
+    background-color: white;
+    text-align: center;
+
+}
+
+.box-item:hover {
+    color: white;
+    background-color: #76c38f;
+}
+
+.box-container1 {
+    width: 960px;
+    height: 200px;
+    padding-bottom: 30px;
+    padding-top: 52px;
+    margin-left: 120px;
+    margin-right: 120px;
+    display: flex;
+
+}
+
+#box-box {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    margin-left: 52px;
+    margin-right: 52px;
+    background-color: #333333;
+}
+
+p {
+    font-size: 13px;
+    font-family: "Georgia";
+}
+a {
+    text-decoration: none;
+}
+.box-container2 {
+    width: 960px;
+    height: 200px;
+    margin-left: 120px;
+    margin-right: 120px;
+    display: flex;
+}
+
+
+.box-item1 {
+    width: 300px;
+    height: 200px;
+    background-color: #353535;
+    margin-right: 30px;
+    border: 5px solid white;
+    display: block;
+    text-align: center;
+}
+
+.box-item1:hover {
+    border-color: #76c38f;
+}
+
+.rectangle {
+    position: relative;
+    height: 3px;
+    margin-top: 63px;
+    background-color: #303030;
+}
+
+.rectangle1 {
+    padding-bottom: 30px;
+    width: 290px;
+    height: 30px;
+    background: black;
+    text-align: center;
+}
+
+.rectangle1:hover {
+    opacity: 0;
+}
+
+.name {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    padding-top: 90px;
+}
+
+#word {
+    position: relative;
+    height: 48px;
+    width: 256px;
+    text-align: center;
+    margin-left: 472px;
+    margin-top: -40px;
+    background-color: #303030;
+    border-radius: 10px;
+}
+
+.box-container1 {
+    text-align: left;
+
+    margin-left: 120px;
+    margin-right: 120px;
+    display: flex;
+}
+
+#childbox {
+    margin-top: 0px;
+    width: 224px;
+    height: 141px;
+    font-size: 13px;
+    line-height: 21px;
+    color: #979797;
+    font-family: "Georgia";
+    margin-right: 20px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+}
+.textbox1{
+    width: 225px;
+    height: 35px;
+    border-radius: 11px;
+    background-color: #222222;
+    color: white ;
+    margin: 2px;
+    padding:10px;
+    font-family: "Georgia";
+}
+.textbox2{
+    width: 225px;
+    height: 35px;
+    border-radius: 11px;
+    background-color: #222222;
+    color: white ;
+    margin: 2px;
+    padding:10px;
+    font-family: "Georgia";
+}
+.textbox3{
+    width: 225px;
+    height: 35px;
+    border-radius: 11px;
+    background-color: #222222;
+    color: white ;
+    margin: 2px;
+    padding:10px;
+    font-family: "Georgia";
+}
+
+.textbox4{
+    width: 225px;
+    height: 80px;
+    border-radius: 11px;
+    background-color: #222222;
+    color: white ;
+    margin: 2px;
+    padding:10px;
+}
+.submitButton{
+    margin: 2px;
+    padding:10px;
+    border-radius: 11px;
+    background-color:#76c38f;
+    font-size: 12px;
+    line-height: 14px;
+    color: #303030;
+    font-family: "Georgia";
+}
+.box-container2.1{
+    border-top: 1px solid black;
+    display: flex;
+    width: 1200px;
+    height: 60px;
+    background-color: #2b2b2b;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.text1{
+    margin-left: 120px;
+    margin-right: 120ox;
+    text-align: left;
+    font-size: 13px;
+    line-height: 13px;
+    color: #979797;
+    font-family: "Georgia";
+    padding: 50px;
+    margin: 20px;
+}
+.text2{
+    font-size: 13px;
+    line-height: 13px;
+    color: #979797;
+    font-family: "Georgia";
+    text-align: right;
+    padding: 0px;
+    margin: -92px;
+}
+.bot1{
+    margin: 0 auto;
+    text-align: center;
+    width: 1200px;
+    height: 62px;
+    display: flex;
+    background-color: #303030;
+}
+.bot1_text1{
+    text-align: left;
+    margin-right: 485px;
+    margin-left: 120px;
+    padding-top: 12px;
+    font-size: 13px;
+    line-height: 13px;
+    color: #979797;
+    font-family: "Georgia";
+}
+.bot1_text2{
+    text-align: right;
+    margin-right: 120px;
+    padding-top: 12px;
+    font-size: 13px;
+    line-height: 13px;
+    color: #979797;
+    font-family: "Georgia";
+}
+.rectangle2{
+    margin-bottom: 61px;
+    height: 1px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+}
+.rectangle3{
+    margin-bottom: 60px;
+    height: 1px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color:#3a3a3a;
+}
+
