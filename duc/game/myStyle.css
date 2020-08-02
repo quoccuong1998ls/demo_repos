@@ -1,0 +1,156 @@
+#box1{
+    background-color: #f6f6f8;
+    color: black;
+}
+#box2{
+    background-color: #fefefe;
+    color: #c1c1c1;
+}
+
+.divmain{
+    background-color: #a3764c;
+    height: 650px;
+
+    margin-left: 50px;
+    margin-right: 50px;
+}
+ /* .divbox{
+    background-color: #fefefe;
+    
+    height: 600px;
+    display: flex;
+
+ 
+    margin-left: 20px;
+    margin-right: 20px;
+   
+    position: relative;
+}
+.divbox1{
+    
+    width: 50%;
+    height: 100%;
+    line-height: 100px;
+    text-align: center;
+    
+    display: inline-block;
+    
+   
+} */ 
+
+.font{
+    font-size: 40px;
+    
+    text-align: center;
+}
+.fontPoint{
+    font-size: 100px;
+    line-height: 50px;
+    padding-top: 60px;
+    text-align: center;
+    color: red;
+}
+
+.point{
+    width: 100px;
+    height: 100px;
+    background-color: #ee1c3f;
+    margin-top: 50px;
+    margin-left: 240px;
+    line-height: 25px;
+    text-align: center;
+    
+}
+.divmid{
+    width: 20%;
+    height: 100%;
+    margin-left: 34%;
+    text-align: center;
+    position: absolute;
+    
+    
+}
+
+.divmid1{
+    height: 170px;
+    text-align: center;
+    display: inline-block;
+}
+.divmid:hover{
+    cursor: pointer;
+}
+.box{
+    background-color: white;
+    border: 1px solid #ee1c3f;
+    width: 110px;
+    height: 110px;
+    margin-left: 90px;
+    display: flex;
+  
+}
+.cham{
+    background-color: red;
+    
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    visibility: hidden;
+    display: inline-block;
+}
+
+.cham1{
+    margin-top: 10px;
+    margin-left: 20px;
+    
+}
+.cham2{
+   
+    margin-top: 10px;
+   
+}
+.cham3{
+    margin-top: 10px;
+   
+}
+.cham4{
+    margin-top: 40px;
+    margin-left: 13px;
+   
+}
+.cham5{
+    margin-top: 10px;
+    margin-left: 15px;
+   
+}
+.cham6{
+    margin-top: 10px;
+    
+    
+}
+.cham7{
+    margin-top: 10px;
+    
+    
+}
+#win{
+    height: 500px;
+    width: 800px;
+    background-color: white;
+    border: 1px solid #000000;
+    margin-left: 200px;
+    text-align: center;
+    position: absolute;
+    z-index: -1;
+}
+#player1{
+    font-size: 50px;
+    color: #000000;
+    line-height: 50px;
+    visibility: hidden;
+}
+#player2{
+    font-size: 50px;
+    color: #000000;
+    line-height: 50px;
+    visibility: hidden;
+}

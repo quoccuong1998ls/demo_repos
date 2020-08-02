@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="myStyle.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        
+    </head>
+    <body style="background-color: #966338;">
+      
+        <div class="divmain">
+           
+            <div class="row" style="width: 1200px; margin-left: 32px;background-color: #fefefe;position: relative;">
+                <div id="win">
+                    <p id="player1">PLAYER 1 WIN</p>
+                    <P id="player2">PLAYER 2 WIN</P>
+
+                    <button onclick="cancel()">Cancel</button>
+                </div>
+                <div class="col-6" id="box1" style="height: 620px;">
+                    <div style="height: 50%;">
+                        <h1 class="font" id="font1">PLAYER 1 <span id="dot_id1" style="color: red;">●</span></h1>
+                        <p class="fontPoint" id="point1">0</p>
+                    </div>
+                    <div class="point">
+                        <p style="color: black;">CURRENT</p>
+                        <p id="point_id1" style="color: white;font-size: 30px;">0</p>
+                        
+                        
+                    </div>
+                </div>
+                <div class="col-6" id="box2">
+                    <div style="height: 50%;">
+                        <h1 class="font" id="font2">PLAYER 2 <span id="dot_id2" style="color: red;visibility: hidden;">●</span></h1>
+                        <p class="fontPoint" id="point2">0</p>
+                    </div>
+                    <div class="point">
+                        
+                        <p style="color: black;">CURRENT</p>
+                        <p id="point_id2" style="color: white;font-size: 30px;">0</p>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-6 col-md-3" style="position: absolute;margin-left: 440px;text-align: center;">
+                        <p onclick="newGame()" style="margin-top: 10%; color: red;text-align:center;cursor: pointer;"><i class="material-icons">control_point</i> NEW GAME</p>
+                        
+
+                        <div style="margin-top: 30%;margin-bottom: 70%;">
+                            <div class="box" id="num">
+                             
+                               <div class="cham1">
+                                   <div class="cham" id="dot1"></div>
+                                    <div  class="cham2" >
+                                        <div class="cham" id="dot2"></div>
+                                        <div class="cham3" >
+                                            <div class="cham" id="dot3"></div>
+                                        </div>
+                                    </div>
+                                   
+                               </div>
+                               <div class="cham4">
+                                   <div class="cham" id="dot4" style="visibility: visible;"></div>
+                               </div>
+                               <div class="cham5">
+                                <div class="cham" id="dot5"></div>
+                                 <div  class="cham6" >
+                                     <div class="cham" id="dot6"></div>
+                                     <div class="cham7" >
+                                         <div class="cham" id="dot7"></div>
+                                     </div>
+                                 </div>
+                                
+                            </div>
+                           
+                                
+                            </div>
+                        
+                        </div>
+                        <p onclick="myFunction(1,7)" style="color: red;cursor: pointer;"><i class='fas fa-sync'></i> ROLL DICE</p>
+                        
+                        <p onclick="hold()" style="color: red;cursor: pointer;"><i class="material-icons">system_update_alt</i> HOLD</p>
+                </div>
+
+                </div>
+            </div>
+            
+        </div>
+       
+        <script type="text/javascript" src="myScript.js"></script>
+
+    </body>
+</html>
