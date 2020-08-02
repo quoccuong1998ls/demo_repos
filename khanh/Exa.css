@@ -1,0 +1,143 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    background-color: white;
+}
+.theme{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-right: 12px;
+    padding-left: 12px;
+    position: relative;
+    margin: auto;
+    width: 790px;
+    height: 470px;
+    background-color:#ab9475;
+    text-align: center;font-family: Arial, Helvetica, sans-serif;
+}
+#div_tb{
+    border: 0px solid;
+    width: 160px;
+    height: 38px;
+    position: absolute;
+    top: 0px;
+    left: 325px;
+    font-size: 20px;
+    color:#ff0000;
+}
+.background{
+    background-color: white;
+    position: absolute;
+    height: 470px;
+    width: 790px;
+    display: flex;
+}
+.body{
+    width: 960px;
+    height: 540px;
+    background-color:#966338;
+    margin: 30 auto;
+}
+.player{
+    width: 395px;
+    height: 470px;
+    background-color: white;
+}
+.cham{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 25%;
+}
+#c1{
+    visibility: visible;
+}
+#c2{
+    visibility: hidden;
+}
+.player_name{
+    color: #A1A1A1;
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: 0;
+}
+.score{
+    color: #ff0000;
+    font-size: 55px;
+    line-height: 72px;
+    margin-top:20px;
+    margin-bottom: 0;
+}
+.box{
+    border: 0px solid;
+    background-color: red;
+    width: 95px;
+    height:70px;
+    margin: 0 auto;
+    margin-top: 95px;
+}
+.random{
+    color: white;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#background1{
+    background-color: #f2f2f2;
+}
+#background2{
+    background-color: #f6f6f8;
+}
+.game{
+    margin: auto;
+    position: absolute;
+    width: 150px;
+    height: 470px;
+    left: 320px;
+    font-size: 20px;
+}
+#img{
+    margin-top: 85px;
+    width: 72px;
+    height: 72px;
+    box-shadow: 1px 1px 50px 1px #bebebe ;
+}
+.controll{
+    display: flex;
+    justify-content: space-around;
+}
+.controll:hover{
+    cursor: pointer;
+}
+.material-icons{
+    font-size:20px;
+    color: red;
+}
+#time1{
+    border: 1px solid;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -50px;
+    left: 185px;
+    font-size: 15px;
+    color: black;
+}
+#time2{
+    border: 1px solid;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -50px;
+    left: 185px;
+    font-size: 15px;
+    color: black;
+}
+

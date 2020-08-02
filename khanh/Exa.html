@@ -1,0 +1,51 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="css/Exa.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    </head>
+    <body>
+        <div class="body">
+            <div class="theme">
+                <div id="div_tb">
+
+                </div>
+                <div class="background">
+                    <div class="player" id="background1" >
+                        <p class="player_name">
+                            PLAYER 1
+                            <span id="time1"></span>
+                            <span class="cham" id="c1"></span>
+                        </p>
+                        <p id="score1" class="score">0</p>
+                        <div class="box">
+                            <p style="padding-top: 10px;font-size: 10px;">CURRENT</p>
+                            <p id="random1" class="random">0</p>
+                        </div>
+                    </div>
+                    <div class="game">
+                        <p class="controll" style=" margin-top: 35px;margin-bottom: 0;" onclick="newGame()"><i class="material-icons">add_circle_outline</i>New Game</p>
+                        <div>
+                            <img id="img">
+                        </div>
+                        <p class="controll" style="margin-top: 95px;" onclick="random_player()"><i class='fas fa-sync' style="font-size:20px;color: red;"></i>ROLL DICE</p>
+                        <p class="controll" onclick="hold()"><i class="material-icons">move_to_inbox</i>HOLD</p>
+                    </div>
+                    <div class="player" id="background2"> 
+                        <p class="player_name">PLAYER 2
+                            <span id="time2"></span>
+                            <span class="cham" id="c2"></span>
+                        </p>
+                        <p id="score2" class="score">0</p>
+                        <div class="box">
+                            <p style="padding-top: 10px;font-size: 10px;">CURRENT</p>
+                            <p id="random2" class="random">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="javascript/Exa.js"></script>
+    </body>
+</html>
