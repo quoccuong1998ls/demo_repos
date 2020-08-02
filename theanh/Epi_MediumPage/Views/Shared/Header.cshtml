@@ -1,0 +1,44 @@
+@using EPiServer.Editor
+@using EPiServer.Core
+@using EPiServer.Web
+@model IPageViewModel<SitePageData>
+<div class="row">
+    <div id="header">
+        <div>
+            <div id="div_logo">
+                <a href="@Model.Layout.LogotypeLinkUrl" title="@Model.Layout.Logotype.Title">
+                    @Html.PropertyFor(x => x.Layout.Logotype)
+                </a>
+            </div>
+
+            <div id="div_page_name">
+                <p @Html.EditAttributes(x => x.CurrentPage.PageName)>@Model.CurrentPage.PageName</p>
+            </div>
+        </div>
+
+        <div id="div_right_header">
+
+            <p id="p_member">
+                Become a member
+            </p>
+
+            @if (Model.Layout.LoggedIn)
+            {
+                @Html.ActionLink(Html.Translate("/footer/logout"), "Logout", new { language = @Model.CurrentPage.Language.Name })
+            }
+            else
+            {
+                if (!Model.Layout.IsInReadonlyMode)
+                {
+                    <a href="@Model.Layout.LoginUrl" title="@Html.Translate("/footer/login")">@Html.Translate("/footer/login")</a>
+                }
+            }
+
+            <p id="div_started">
+                Get started
+            </p>
+
+        </div>
+    </div>
+</div>
+
