@@ -1,0 +1,629 @@
+﻿@using System.Linq;
+@using System.Web.Mvc;
+@using EPiServer;
+@using EPiServer.Core;
+@using EPiServer.Framework.DataAnnotations;
+@using EPiServer.ServiceLocation;
+@using EPiServer.Web.Mvc;
+@using EpiserverSite1.Models.Pages;
+@model EpiserverSite1.Models.Pages.Test
+
+@{
+    Layout = "~/Views/Shared/_root.cshtml";
+
+}
+@{ List<child> list = new List<child>(); }
+@foreach (PageData item in ViewBag.children as IEnumerable<PageData>)
+{
+
+    foreach (var startPage in DataFactory.Instance.GetChildren<child>(item.ContentLink) as IEnumerable<child>)
+    {
+        list.Add(startPage);
+    }
+}
+@{ 
+    list.Sort(
+        (p1, p2) =>
+        {
+            if (p1.Created > p2.Created)
+                return 1;
+            else if (p1.Created == p2.Created)
+                return 0;
+            return -1;
+        });
+
+}
+
+
+
+
+    <div class="container" style="padding-left:0;padding-right:0;">
+
+        
+        <div class="row">
+            <div style="margin:20px 0 20px 0;padding-left:15px;">
+                <img src="~/tinymce/rautrang.jpg" alt=".." height="200" width="1000" />
+            </div>
+            <div class="contentleft">
+
+                @{
+                    var mot = list.ElementAt(0);
+                    var hai = list.ElementAt(1);
+                    var ba = list.ElementAt(2);
+                    var bon = list.ElementAt(3);
+                    <div class="wptopleft">
+
+
+                        <div class="card" style="border:none;">
+                            <a class="navbar-brand" href="@Url.ContentUrl(mot.LinkURL)">
+                                <img src="@Url.ContentUrl(mot.TeaserImage)" width="400" height="262" />
+                            </a>
+                            <div class="card-img-overlay" style="top:120px;background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#e34b4b 100%);">
+                                <h5 class="card-title">
+                                    <a class="tt" href="@Url.ContentUrl(mot.LinkURL)">
+                                        @mot.Name
+                                    </a>
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card" style="border:none;">
+                            <a class="navbar-brand" href="@Url.ContentUrl(hai.LinkURL)">
+                                <img src="@Url.ContentUrl(hai.TeaserImage)" width="400" height="163" />
+                            </a>
+                            <div class="card-img-overlay" style="top:120px">
+                                <h5 class="card-title">
+                                    <a class="tt" href="@Url.ContentUrl(hai.LinkURL)">
+                                        @hai.Name
+                                    </a>
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card" style="border:none;padding:15px;">
+                            @{
+                                Random r = new Random();
+                                for (int i = 0; i < 3; i++)
+                                {
+                                    int k = r.Next(1, list.Count());
+                                    var randon1 = list.ElementAt(k);
+                                    var randon2 = list.ElementAt(k - 1);
+                                    <div class="row">
+                                        <div class="col-6" style="padding:0;">
+                                            <a class="navbar-brand" href="@Url.ContentUrl(randon1.LinkURL)">
+                                                <img src="href=@Url.ContentUrl(randon1.TeaserImage)" alt=".." width="192" height="129" />
+                                            </a>
+                                            <div class="card-body">
+                                                <a href="@Url.ContentUrl(randon1.LinkURL)" style="font-size: 13px; font-family: Tahoma; color: #242424 !important;">
+                                                    @randon1.Name
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-6" style="padding:0;">
+                                            <a class="navbar-brand" href="@Url.ContentUrl(randon2.LinkURL)">
+                                                <img src="href=@Url.ContentUrl(randon2.TeaserImage)" alt=".." width="192" height="129" />
+                                            </a>
+                                            <div class="card-body">
+                                                <a href="@Url.ContentUrl(randon2.LinkURL)" style="font-size: 13px; font-family: Tahoma; color: #242424 !important;">
+                                                    @randon2.Name
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+
+
+                    <div class="wptopright">
+
+                        <div class="card" style="border:none;">
+                            <a class="navbar-brand" href="@Url.ContentUrl(ba.LinkURL)">
+
+                                <img src="@Url.ContentUrl(ba.TeaserImage)" width="278" height="262" />
+                            </a>
+                            <div class="card-img-overlay" style="top:100px;padding:0;background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#26a216 100%);">
+                                <h5 class="card-title">
+                                    <a href="@Url.ContentUrl(ba.LinkURL)" class="tt">
+                                        @ba.Name
+                                    </a>
+                                </h5>
+
+                            </div>
+                        </div>
+
+                        <div class="card" style="border:none;">
+                            <a class="navbar-brand" href="@Url.ContentUrl(bon.LinkURL)">
+                                <img src="@Url.ContentUrl(bon.TeaserImage)" width="278" height="163" />
+
+                            </a>
+                            <div class="card-img-overlay" style="top:50px;padding:0;">
+                                <h5 class="card-title">
+                                    <a href="@Url.ContentUrl(bon.LinkURL)" class="tt">
+                                        @bon.Name
+                                    </a>
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="trainghiemnews mgt15">
+                            <div class="labeltop">
+                                <h2><a class="tt" href="/video-lmht.htm">VIDEO ĐÁNG CHÚ Ý<span></span></a></h2>
+                            </div>
+                            <ul>
+                                <li class="top">
+                                    <a href="/video-vietsub-dang-cap-la-mai-mai-faker-moi-dan-em-teddy-an-ngap-chao-hanh-voi-tuong-tu-leblanc-20191229233335279.chn" title="(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc">
+                                        <img src="https://gamek.mediacdn.vn/zoom/80_50/2019/12/29/faker-1577636808740561485547.jpg" alt="(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc" width="80px" height="50px" https:="" gamek.mediacdn.vn="" zoom="" 80_50="" 2019="" 12="" 29="" faker-1577636808740561485547.jpg="">
+                                    </a>
+                                    <a class="ion" href="/video-vietsub-dang-cap-la-mai-mai-faker-moi-dan-em-teddy-an-ngap-chao-hanh-voi-tuong-tu-leblanc-20191229233335279.chn" title="(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc"></a>
+                                    <a href="/video-vietsub-dang-cap-la-mai-mai-faker-moi-dan-em-teddy-an-ngap-chao-hanh-voi-tuong-tu-leblanc-20191229233335279.chn" title="(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc">(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc</a>
+                                </li>
+                                <li class="top" style="border:none;">
+                                    <a href="/video-vietsub-dang-cap-la-mai-mai-faker-moi-dan-em-teddy-an-ngap-chao-hanh-voi-tuong-tu-leblanc-20191229233335279.chn" title="(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc">
+                                        <img src="https://gamek.mediacdn.vn/zoom/80_50/2019/12/29/faker-1577636808740561485547.jpg" alt="(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc" width="80px" height="50px" https:="" gamek.mediacdn.vn="" zoom="" 80_50="" 2019="" 12="" 29="" faker-1577636808740561485547.jpg="">
+                                    </a>
+                                    <a class="ion" href="/video-vietsub-dang-cap-la-mai-mai-faker-moi-dan-em-teddy-an-ngap-chao-hanh-voi-tuong-tu-leblanc-20191229233335279.chn" title="(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc"></a>
+                                    <a href="/video-vietsub-dang-cap-la-mai-mai-faker-moi-dan-em-teddy-an-ngap-chao-hanh-voi-tuong-tu-leblanc-20191229233335279.chn" title="(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc">(Video Vietsub) Đẳng cấp là mãi mãi: Faker mời đàn em Teddy ăn ngập cháo hành với tướng tủ Leblanc</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        @*<div class="trainghiemnews mgt15">
+                        <div class="labeltop">
+                            <h2><a class="tt" href="/video-lmht.htm"><span style="text-align:center;">EMAGAZINE</span></a></h2>
+                        </div>
+                        <ul>
+                            <li class="top video">
+                                <a href="/pewpew-lan-dau-chia-se-ap-luc-no-nan-cua-tuoi-29-va-tay-ngang-mao-hiem-nuoi-tom-khi-da-quyet-dinh-dat-cuoc-nhat-dinh-ban-phai-giu-thai-do-binh-tam-trong-suot-van-cuoc-do-20200125123056395.chn" title="PewPew lần đầu chia sẻ áp lực nợ nần của tuổi 29 và tay ngang mạo hiểm nuôi tôm: “Khi đã quyết định đặt cược, nhất định bạn phải giữ thái độ bình tâm trong suốt ván cược đó!”">
+                                    <img src="https://gamek.mediacdn.vn/zoom/80_50/133514250583805952/2020/1/25/thumb-15793175045371075549744-crop-1579317513402184517293-1579930157376173610570.png" alt="PewPew lần đầu chia sẻ áp lực nợ nần của tuổi 29 và tay ngang mạo hiểm nuôi tôm: “Khi đã quyết định đặt cược, nhất định bạn phải giữ thái độ bình tâm trong suốt ván cược đó!”">
+                                </a>
+                                <a href="/pewpew-lan-dau-chia-se-ap-luc-no-nan-cua-tuoi-29-va-tay-ngang-mao-hiem-nuoi-tom-khi-da-quyet-dinh-dat-cuoc-nhat-dinh-ban-phai-giu-thai-do-binh-tam-trong-suot-van-cuoc-do-20200125123056395.chn" title="PewPew lần đầu chia sẻ áp lực nợ nần của tuổi 29 và tay ngang mạo hiểm nuôi tôm: “Khi đã quyết định đặt cược, nhất định bạn phải giữ thái độ bình tâm trong suốt ván cược đó!”">PewPew lần đầu chia sẻ áp lực nợ nần của tuổi 29 và tay ngang mạo hiểm nuôi tôm: “Khi đã quyết định đặt cược, nhất định bạn phải giữ thái độ bình tâm trong suốt ván cược đó!”</a></h3>
+                            </li>
+
+                            <li class="top video">
+                                <a href="/gunny-mobi-hanh-trinh-phat-trien-tu-su-nghi-ngo-cho-toi-mot-sieu-pham-pha-vo-dinh-nghia-ve-tro-choi-dien-tu-20191231095327763.chn" title="Gunny Mobi: Hành trình phát triển từ sự nghi ngờ cho tới một siêu phẩm phá vỡ định nghĩa về trò chơi điện tử">
+                                    <img src="https://gamek.mediacdn.vn/zoom/80_50/2019/2019-12-30-avatar-ngang-15776941626931348810110-0-3-497-800-crop-1577694175629-15777024414341009974393-637133828082795000.png" alt="Gunny Mobi: Hành trình phát triển từ sự nghi ngờ cho tới một siêu phẩm phá vỡ định nghĩa về trò chơi điện tử">
+                                </a>
+                                <a href="/gunny-mobi-hanh-trinh-phat-trien-tu-su-nghi-ngo-cho-toi-mot-sieu-pham-pha-vo-dinh-nghia-ve-tro-choi-dien-tu-20191231095327763.chn" title="Gunny Mobi: Hành trình phát triển từ sự nghi ngờ cho tới một siêu phẩm phá vỡ định nghĩa về trò chơi điện tử">Gunny Mobi: Hành trình phát triển từ sự nghi ngờ cho tới một siêu phẩm phá vỡ định nghĩa về trò chơi điện tử</a></h3>
+                            </li>
+
+                        </ul>
+                    </div>*@
+                    </div>
+                }
+                <div class="sukiengame">
+                    <div class="left">
+                        <h5><span>ĐÁNG CHÚ Ý</span></h5>
+                    </div>
+                    <p><b>Ảnh Kiếm 3D "đông nghìn nghịt" ngày Alpha Test, tặng 4 VipCode xịn</b><br /><span><b>ĐÁNG CHÚ Ý</b></span></p>
+                </div>
+
+
+
+
+                <div class="dongsukiengame">
+
+                    <div class="right fl">
+
+
+                        <div class="menu-dong">
+                            <ul class="nav justify-content-star">
+                                <li>
+                                    <a href="" class="imglogo">DANH SACH GAME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link link2">MỚI</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link link2">MOBILE ESPORT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link link2">MOBILE CASUAL</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link link2">MOBILE NHẬP VAI</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link link2">XEM TẤT CẢ...</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="conten-dong" id="myDIV" onscroll="scrollleft()">
+                                <ul class="nav justify-content-star" id="content">
+
+
+                                    <li class="nav-item">
+                                        <a href="/anh-kiem-3d.htm" title="Ảnh Kiếm 3D">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/7/23/ava-1595475527615730790793.png" alt="Ảnh Kiếm 3D" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/anh-kiem-3d.htm" title="Ảnh Kiếm 3D" class="nav-link link3">
+                                            Ảnh Kiếm 3D
+                                        </a>
+
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+
+                                        <a href="/3q-ba-vuong.htm" title="3Q Bá Vương">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/7/7/avatar-159409721746961650733.png" alt="3Q Bá Vương" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/3q-ba-vuong.htm" title="3Q Bá Vương" class="nav-link link3">
+                                            3Q Bá Vương
+                                        </a>
+
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/mong-ao-tu-tien.htm" title="Mộng Ảo Tu Tiên">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/7/7/avatar-15940978141321189055114.jpg" alt="Mộng Ảo Tu Tiên" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/mong-ao-tu-tien.htm" title="Mộng Ảo Tu Tiên" class="nav-link link3">
+                                            Mộng Ảo Tu Tiên
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/luc-mach-than-kiem-3d.htm" title="Lục Mạch Thần Kiếm 3D">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/7/21/lm-1595319541131757739502.jpg" alt="Lục Mạch Thần Kiếm 3D" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/luc-mach-than-kiem-3d.htm" title="Lục Mạch Thần Kiếm 3D" class="nav-link link3">
+                                            Lục Mạch Thần Kiếm 3D
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/long-kiem-cuu-chau-3d.htm" title="Long Kiếm Cửu Châu 3D">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/7/21/lk-1595319296134590609836.jpg" alt="Long Kiếm Cửu Châu 3D" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/long-kiem-cuu-chau-3d.htm" title="Long Kiếm Cửu Châu 3D" class="nav-link link3">
+                                            Long Kiếm Cửu Châu 3D
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/ty-muoi-hoang-cung.htm" title="Tỷ Muội Hoàng Cung">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/7/9/abc1-1594290382271374542536.jpg" alt="Tỷ Muội Hoàng Cung" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/ty-muoi-hoang-cung.htm" title="Tỷ Muội Hoàng Cung" class="nav-link link3">
+                                            Tỷ Muội Hoàng Cung
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/valorant.htm" title="Valorant">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/6/29/logo-159342010638090389640.jpg" alt="Valorant" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/valorant.htm" title="Valorant" class="nav-link link3">
+                                            Valorant
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/vua-bong-da-2020.htm" title="Vua Bóng Đá 2020">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/6/25/vbd-1593059242818348040167.png" alt="Vua Bóng Đá 2020" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/vua-bong-da-2020.htm" title="Vua Bóng Đá 2020" class="nav-link link3">
+                                            Vua Bóng Đá 2020
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/hoa-son-ngu-tuyet.htm" title="Hoa Sơn Ngũ Tuyệt">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/7/9/a1-15942898427361959745223.jpg" alt="Hoa Sơn Ngũ Tuyệt" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/hoa-son-ngu-tuyet.htm" title="Hoa Sơn Ngũ Tuyệt" class="nav-link link3">
+                                            Hoa Sơn Ngũ Tuyệt
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/giang-son-my-nhan-sohagame.htm" title="Giang Sơn Mỹ Nhân SohaGame">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/5/25/gs-15903807152711845662231.jpg" alt="Giang Sơn Mỹ Nhân SohaGame" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/giang-son-my-nhan-sohagame.htm" title="Giang Sơn Mỹ Nhân SohaGame" class="nav-link link3">
+                                            Giang Sơn Mỹ Nhân SohaGame
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/call-of-duty-mobile-vn.htm" title="Call of Duty: Mobile VN">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/3/17/808927091485567266106455267035871030280192o-15844311105831052156746.jpg" alt="Call of Duty: Mobile VN" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/call-of-duty-mobile-vn.htm" title="Call of Duty: Mobile VN" class="nav-link link3">
+                                            Call of Duty: Mobile VN
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/perfect-world-vng.htm" title="Perfect World VNG">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/4/16/-15870071151701881292113.jpg" alt="Perfect World VNG" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/perfect-world-vng.htm" title="Perfect World VNG" class="nav-link link3">
+                                            Perfect World VNG
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/ngu-kiem-mobile.htm" title="Ngự Kiếm Mobile">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/6/18/nk1-15924137023851825722632.jpg" alt="Ngự Kiếm Mobile" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/ngu-kiem-mobile.htm" title="Ngự Kiếm Mobile" class="nav-link link3">
+                                            Ngự Kiếm Mobile
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/tam-quoc-toc-chien.htm" title="Tam Quốc Tốc Chiến">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/2/25/tq-15826233675261301637064.jpg" alt="Tam Quốc Tốc Chiến" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/tam-quoc-toc-chien.htm" title="Tam Quốc Tốc Chiến" class="nav-link link3">
+                                            Tam Quốc Tốc Chiến
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/tuyet-dai-song-tu.htm" title="Tuyệt Đại Song Tu">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/4/16/a1-15870073343211393197882.jpg" alt="Tuyệt Đại Song Tu" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/tuyet-dai-song-tu.htm" title="Tuyệt Đại Song Tu" class="nav-link link3">
+                                            Tuyệt Đại Song Tu
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/ngao-kiem-3d.htm" title="Ngạo Kiếm 3D">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/4/16/a1-1587007600714104412427.jpg" alt="Ngạo Kiếm 3D" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/ngao-kiem-3d.htm" title="Ngạo Kiếm 3D" class="nav-link link3">
+                                            Ngạo Kiếm 3D
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/ve-than-mobile.htm" title="Vệ Thần Mobile">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/2/22/vethan-1582345669740659494253.jpg" alt="Vệ Thần Mobile" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/ve-than-mobile.htm" title="Vệ Thần Mobile" class="nav-link link3">
+                                            Vệ Thần Mobile
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/dau-truong-chan-ly-mobile.htm" title="Đấu Trường Chân Lý Mobile">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/2/8/2game-logo-dau-truong-chan-ly-mobile-1s-15811490351501166826297.jpg" alt="Đấu Trường Chân Lý Mobile" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/dau-truong-chan-ly-mobile.htm" title="Đấu Trường Chân Lý Mobile" class="nav-link link3">
+                                            Đấu Trường Chân Lý Mobile
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/bat-hoang-lanh-chu.htm" title="Bát Hoang Lãnh Chủ">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/3/30/bat-1585551353146327743727.jpg" alt="Bát Hoang Lãnh Chủ" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/bat-hoang-lanh-chu.htm" title="Bát Hoang Lãnh Chủ" class="nav-link link3">
+                                            Bát Hoang Lãnh Chủ
+                                        </a>
+
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a href="/am-duong-kiem.htm" title="Âm Dương Kiếm">
+                                            <img src="https://gamek.mediacdn.vn/zoom/120_90/133514250583805952/2020/3/20/ad-15846770421131632314648.png" alt="Âm Dương Kiếm" width="120px" height="90px">
+                                        </a>
+                                        <br />
+                                        <a href="/am-duong-kiem.htm" title="Âm Dương Kiếm" class="nav-link link3">
+                                            Âm Dương Kiếm
+                                        </a>
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+
+                </div>
+                <div class="newsupdate">
+                    <h2 class="top">
+                        <a href="#">MỚI CẬP NHẬT</a>
+                    </h2>
+                    @foreach (child item in list)
+                    {
+
+                        //foreach (PageData startPage in DataFactory.Instance.GetChildren<child>(item.ContentLink) as IEnumerable<child>)
+                        //{
+                        //}
+
+                        <div class="card" style="max-width: 690px;border:1px solid #ffffff">
+                            <ul class="card mb-3" style="max-width: 6900px;padding:0;margin:0;border:none;">
+                                <li class="row no-gutters">
+                                    <a class="col-md-5" href="@Url.ContentUrl(item.LinkURL)">
+                                        <img src="@Url.ContentUrl(item.TeaserImage)" class="card-img" alt="..." width="100%" height="200">
+                                    </a>
+                                    <a class="col-md-7" href="@Url.ContentUrl(item.LinkURL)">
+                                        <h5 class="card-title">@item.Name</h5>
+
+                                        <p class="card-text"><small class="text-muted">@Html.DisplayFor(x => item.Category) | @item.Created</small></p>
+
+                                    </a>
+                                </li>
+                                @*<li class="row no-gutters">
+                                <a class="col-md-5" href="">
+                                    <img src="..." class="card-img" alt="...">
+                                </a>
+                                <a class="col-md-7" href="">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </a>
+                            </li>
+                            <li class="row no-gutters">
+                                <a class="col-md-5" href="">
+                                    <img src="..." class="card-img" alt="...">
+                                </a>
+                                <a class="col-md-7" href="">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </a>
+                            </li>
+                            <li class="row no-gutters" style="background:none;border:none;color:#ED484A">
+                                <div class="col-md-5">
+                                    <div class="card" style="width: 18rem;background: linear-gradient(to bottom,#9c9898,#fff);">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7" style="padding-left:20px;">
+                                    <div class="card mb-3" style="max-width: 400px;">
+                                        <div class="row no-gutters" style="background: linear-gradient(to right,#d7d6d6,#fff);">
+                                            <div class="col-md-4">
+                                                <img src="..." class="card-img" alt="...">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Card title1111111111111111</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3" style="max-width: 400px;border-top: 1px solid #ebebeb!important;border-bottom: 1px solid #ebebeb!important;">
+                                        <div class="row no-gutters" style="background: linear-gradient(to right,#d7d6d6,#fff);">
+                                            <div class="col-md-4">
+                                                <img src="..." class="card-img" alt="...">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Card title1111111111111111</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="row no-gutters" id="livideohome">
+                                <div class="boxhomevideo">
+                                    <h3 class="knswli-title">
+                                        <a href="/hoa-than-thanh-black-widow-dai-chien-taskmaster-ngay-trong-marvels-avengers-20200811145856622.chn">Hóa thân thành Black Widow đại chiến Taskmaster ngay trong Marvel's Avengers</a>
+                                    </h3>
+                                    <div class="card mb-3" style="max-width: 690px;">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-9">
+                                                <img src="..." class="card-img" alt="...">
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Card title</h5>
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="row no-gutters">
+                                <a class="col-md-5" href="">
+                                    <img src="..." class="card-img" alt="...">
+                                </a>
+                                <a class="col-md-7" href="">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </a>
+                            </li>
+                            <li class="row no-gutters">
+                                <a class="col-md-5" href="">
+                                    <img src="..." class="card-img" alt="...">
+                                </a>
+                                <a class="col-md-7" href="">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </a>
+                            </li>*@
+                            </ul>
+                        </div>
+
+                    }
+                    <button type="button" class="btn btn-danger btn-lg btn-block">Xem thêm</button>
+                </div>
+            </div>
+            <div class="contentright" id="nav">
+                <div id="nav"><img src="~/tinymce/katakuri.png" alt="..." /></div>
+
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,276 @@
+﻿/*EDITOR CSS*/
+
+body {
+    font-family: Tahoma;
+}
+
+.div {
+    display: block;
+}
+
+li {
+    display: list-item;
+}
+
+.wp1000 {
+    width: 1000px;
+   
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+}
+
+.sharetop {
+    float: right;
+    margin-top: 20px;
+}
+
+    .sharetop a {
+        float: left;
+        margin-left: 20px;
+    }
+
+        .sharetop a.facebook {
+            background-position: -221px -42px;
+            width: 10px;
+            height: 15px;
+        }
+
+        .sharetop a.youtube {
+            background-position: -280px -42px;
+            width: 15px;
+            height: 15px;
+        }
+
+        .sharetop a.rss {
+            background-position: -315px -42px;
+            width: 17px;
+            height: 15px;
+        }
+
+.menu {
+    height: 57px;
+    float: left;
+    background: #ec5f5f;
+    width: 100%;
+    margin-top: 3px;
+    position: relative;
+}
+
+.link {
+    color: #ffffff;
+    font: 15px"UTM Bebas";
+    padding: 20px 10px !important;
+}
+
+    .link:hover {
+        color: #ffffff;
+    }
+/* .logo {
+    position: relative;
+    height: 78px;
+    width: 232px;
+}
+.header .logo {
+    float: left;
+    margin: -22px 10px 0 -20px;
+}
+.logo h1 {
+    height: 78px;
+} */
+.header .search1 {
+    background-position: -221px 0;
+    width: 100px;
+    height: 30px;
+    position: relative;
+    float: right;
+    padding: 0 50px;
+}
+
+.search1 .btsearch {
+    position: absolute;
+    right: -80px;
+    top: 20px;
+    width: 28px;
+    height: 28px;
+}
+
+.imagelogo {
+    width: 219px;
+    height: 78px;
+    margin: -22px 10px 0 -20px;
+    background: url(sprite20150608.png) 0 -63px;
+   
+}
+.imglogo {
+    width: 219px;
+    height: 78px;
+   
+    background: url(sprite20150608.png) 0 -223px;
+}
+
+
+
+.menunews {
+    background: #504f4f;
+    height: 40px;
+    float: left;
+    width: 100%;
+}
+
+.nav-item {
+    /* margin: 12px -5px 0 10px; */
+    padding: 0 0px;
+}
+
+.link1 {
+    color: #ffffff;
+    font: 13px"UTM Bebas";
+    padding-top: 13px !important;
+    padding-bottom: 10px !important;
+}
+
+    .link1:hover {
+        color: #ffffff;
+    }
+
+.item :hover {
+    background-color: #EF7474;
+}
+
+.item1 {
+    margin-top: -5px;
+    padding: 5px 0px;
+}
+
+    .item1 :hover {
+        background-color: #646464;
+    }
+
+#navbar {
+    overflow: hidden;
+
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 1000px;
+}
+
+    .sticky + .content {
+        padding-top: 60px;
+    }
+
+.menunews.sticky {
+    background: #ec5f5f;
+
+}
+
+    .menunews.sticky .menumain {
+        display: block;
+    }
+
+
+
+#main {
+    visibility: hidden;
+   
+}
+/*.fl {
+    float: left;
+}
+
+.footer {
+    background: #525252;
+    clear: both;
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+    z-index: 9;
+    position: relative;
+}
+
+.bottom_menu {
+    background: #131313;
+    float: left;
+    width: 100%;
+    height: 40px;
+}
+
+.wp980-mauto {
+    margin: 0 auto;
+    width: 980px;
+}
+
+.footer .info {
+    height: 220px;
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 11px;
+    font-family: Tahoma;
+    color: #cccccc;
+}*/
+
+/* .footer .left_info {
+    
+} */
+/*.footer .left_info {
+    float: left;
+    text-align: left;
+    width: 330px;
+}
+
+.footer .center_info, .footer .right_info {
+    margin-top: 60px;
+}
+
+.footer .center_info, .footer .right_info {
+    width: 315px;
+    float: left;
+    margin-left: 10px;
+    border-left: 1px solid #666;
+    padding-left: 9px;
+    height: 123px;
+}
+
+.footer .right_info {
+    float: left;
+    text-align: left;
+}
+
+
+span.messenger-icon {
+    display: block;
+    margin-right: 5px;
+    width: 12px;
+    flex-shrink: 0;
+}
+
+a.btn-messenger-lightbox {
+    display: inline-flex;
+    margin-top: 0px;
+    height: 24px;
+    padding: 0 15px;
+    background: #0084ff;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    margin-right: 10px;
+    font-family: Tahoma;
+}*/
+
+
+

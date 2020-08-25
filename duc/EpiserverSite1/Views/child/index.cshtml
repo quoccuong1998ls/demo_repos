@@ -1,0 +1,91 @@
+﻿
+@model EpiserverSite1.Models.Pages.child
+
+@{
+    Layout = "~/Views/Shared/_root.cshtml";
+
+}
+
+    <div class="container" style="padding-left:0;padding-right:0;">
+
+
+        <div class="row">
+            <div class="contentleft">
+                <div class="breadcumb">
+
+                    <ol>
+                        <li>
+                            <i></i>
+                        </li>
+                        <li>
+                            <a class="category" href="https://gamek.vn">
+                                GameK
+                            </a>
+                        </li>
+                        <li>›</li>
+                        <li>
+                            <a class="category" href="https://gamek.vn/manga-film.chn">
+                                @Html.Display("Category")
+                            </a>
+                        </li>
+
+
+                    </ol>
+
+
+                </div>
+
+                <div class="topdetail">
+                    <h1 data-epi-property-name="PageName">
+                        @Html.Display("PageName")
+                    </h1>
+                    @*<h1 data-field="title">
+                            One Piece: Nếu đánh bại được băng Bách Thú thì đây chính là 10 sức mạnh mới của băng Mũ Rơm sau arc Wano (P2)
+                        </h1>*@
+                    <p class="mgt15">
+                        <span class="author">@Html.Display("CreatedBy")</span>&nbsp;<a class="fon9" target="_blank" rel="nofollow" href="http://phapluatbandoc.giadinh.net.vn/"> - Theo Pháp luật và bạn đọc </a>|
+
+                        @Html.Display("Created")
+                    </p>
+
+
+
+
+
+                    <div class="liketop">
+
+                    </div>
+                </div>
+               
+                    @*<div class="col-md-3">
+                        <p class="namebox" style="padding-left:20px !important;">
+                            TIN LIÊN QUAN
+                        </p>
+                        
+                        @Html.PropertyFor(x => x.tinlienquan)
+                    </div>*@
+                    <div style="width:690px;">
+
+                        <!-- block content goes here -->
+                        @Html.PropertyFor(x => x.MainContentArea)
+                        <div style="margin-top: 10px;float: left;width: 100%;">
+                            <b>Xem thêm:</b>
+                        </div>
+                        <div class="social-share fl">
+                            <a href="https://www.facebook.com/gamek.vn" target="_blank" title="Kết bạn với Gamek trên Facebook" rel="nofollow">
+                                <span><img src="~/Views/img/gk.png" alt="gk" /></span>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                <div class="detailbt">
+                    <p class="top">Cùng chuyên mục</p>
+                    @Html.PropertyFor(x => x.cungchuyenmuc)
+                </div>
+            </div>
+            <div class="contentright">
+                <div id="nav"><img src="~/tinymce/katakuri.png" alt="..." /></div>
+            </div>
+        </div>
+    </div>
