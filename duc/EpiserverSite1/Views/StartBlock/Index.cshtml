@@ -1,0 +1,47 @@
+﻿@model EpiserverSite1.Models.Blocks.StartBlock
+
+
+@*<div class="card" style="border:none;">
+        <a class="navbar-brand" href="@Model.Url">
+            <img class="pull-left img-responsive" src="@Model.Image" />
+        </a>
+        <div class="card-img-overlay" style="top:120px">
+            <a href="@Model.Url" class="tt">
+                <h5 class="card-title" @Html.EditAttributes(x => x.Heading)>@Model.Heading</h5>
+            </a>
+
+        </div>
+    </div>*@
+
+
+
+    <div class="row row_newer d-none d-md-flex">
+        <div class="col">
+            <a href="@Url.ContentUrl(Model.Link_1)">
+                <img src="@Url.ContentUrl(Model.Image_1)" width="100%">
+            </a>
+            <h5>
+
+                @Html.DisplayFor(x => x.Link_1)
+
+            </h5>
+        </div>
+        <div class="col">
+            <a href="@Url.ContentUrl(Model.Link_2)">
+                <img src="@Url.ContentUrl(Model.Image_2)" width="100%">
+            </a>
+            <h5>
+
+                @Html.DisplayFor(x => x.Link_2)
+            </h5>
+        </div>
+        <div class="col">
+            <a href="@Url.ContentUrl(Model.Link_3)">
+                <img src="@Url.ContentUrl(Model.Image_2)" width="100%">
+            </a>
+            <h5>
+
+                @Html.DisplayFor(x => x.Link_3)
+            </h5>
+        </div>
+    </div>

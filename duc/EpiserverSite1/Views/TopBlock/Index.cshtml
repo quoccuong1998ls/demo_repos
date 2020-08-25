@@ -1,0 +1,22 @@
+﻿@model EpiserverSite1.Models.Blocks.TopBlock
+
+
+
+<div class="card mb-3" style="max-width: 690px;height:200px; border:1px solid #ededed;background:#f4f3f3;">
+    <div class="row no-gutters" style="color:#000000;">
+        <div style="width:310px;">
+            <a href="@Model.Url">
+                <img class="pull-left img-responsive" src="@Model.Image" />
+            </a>
+        </div>
+        <div style="flex:0 0 370px;">
+            <div class="card-body" style="padding:10px;">
+                <a href="@Model.Url" style="color:#393838">
+                    <h5 class="card-title" @Html.EditAttributes(x => x.Heading)>@Model.Heading</h5>
+                </a>
+                <p class="card-text" style="font-size:13px;" @Html.EditAttributes(x => x.Text)>@Model.Text</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</div>

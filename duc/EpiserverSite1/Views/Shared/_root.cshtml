@@ -1,0 +1,818 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            list-style: none;
+            text-decoration: none !important;
+        }
+
+
+        #nav {
+            overflow: hidden;
+        }
+
+        .sti {
+            position: fixed;
+            top: 40px;
+            width: 1000px;
+        }
+
+
+        .fl {
+            float: left;
+        }
+
+        .footer {
+            background: #525252;
+            clear: both;
+            float: left;
+            margin-top: 30px;
+            width: 100%;
+            z-index: 9;
+            position: relative;
+        }
+
+        .bottom_menu {
+            background: #131313;
+            float: left;
+            width: 100%;
+            height: 40px;
+        }
+
+        .wp980-mauto {
+            margin: 0 auto;
+            width: 980px;
+        }
+
+        .footer .info {
+            height: 220px;
+            margin-top: 40px;
+            padding: 10px;
+            font-size: 11px;
+            font-family: Tahoma;
+            color: #cccccc;
+        }
+
+        /* .footer .left_info {
+
+        } */
+        .footer .left_info {
+            float: left;
+            text-align: left;
+            width: 330px;
+        }
+
+        .footer .center_info, .footer .right_info {
+            margin-top: 60px;
+        }
+
+        .footer .center_info, .footer .right_info {
+            width: 315px;
+            float: left;
+            margin-left: 10px;
+            border-left: 1px solid #666;
+            padding-left: 9px;
+            height: 123px;
+        }
+
+        .footer .right_info {
+            float: left;
+            text-align: left;
+        }
+
+
+        span.messenger-icon {
+            display: block;
+            margin-right: 5px;
+            width: 12px;
+            flex-shrink: 0;
+        }
+
+        a.btn-messenger-lightbox {
+            display: inline-flex;
+            margin-top: 0px;
+            height: 24px;
+            padding: 0 15px;
+            background: #0084ff;
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            line-height: 24px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            margin-right: 10px;
+            font-family: Tahoma;
+        }
+
+        .contentleft {
+            width: 705px;
+            float: left;
+            padding-left: 15px;
+        }
+
+        .contentright {
+            width: 310px;
+            float: right;
+            padding-left: 10px;
+        }
+
+            .contentright.sticky {
+            }
+
+        .wptopleft {
+            width: 400px;
+            float: left;
+        }
+
+        .wptopright {
+            width: 278px;
+            float: right;
+        }
+
+        .tt {
+            color: #fff !important;
+            font: 700 18px/30px Tahoma;
+            padding: 0 15px;
+            text-shadow: 1px 1px 0 #000;
+            display: table-cell;
+            vertical-align: middle;
+            position: absolute;
+            text-decoration: none !important;
+        }
+
+        .wptopright .trainghiemnews {
+            float: left;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .mgt15 {
+            margin-top: 15px;
+        }
+
+        .trainghiemnews .labeltop {
+            color: #8c8d8c;
+        }
+
+        .trainghiemnews .labeltop {
+            background: #dedede;
+            height: 33px;
+            width: 100%;
+            float: left;
+            line-height: 33px;
+        }
+
+        .trainghiemnews ul {
+            float: left;
+            width: 276px;
+            padding: 0 0 5px 0;
+            background: #efefef;
+            border: 1px solid #e4e3e3;
+            list-style-type: none;
+            margin: 0;
+        }
+
+            .trainghiemnews ul li.top {
+                border-top: none;
+                padding: 10px 0;
+                margin: 0 10px;
+                display: flex;
+            }
+
+            .trainghiemnews ul li {
+                overflow: hidden;
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #ccc;
+                padding: 10px 0;
+                margin: 0 10px;
+                position: relative;
+            }
+
+        ul {
+            list-style-type: none !important;
+        }
+
+        li {
+            display: list-item;
+        }
+
+        .trainghiemnews ul li .ion {
+            background-position: -295px -85px;
+            width: 27px;
+            height: 26px;
+            float: left;
+            position: absolute;
+            top: 22px;
+            left: 25px;
+        }
+
+        .trainghiemnews ul li a {
+            color: #636463;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 17px;
+            display: table;
+        }
+
+        .wptopright .trainghiemnews {
+            float: left;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .mgt0 {
+            margin-top: 0 !important;
+        }
+
+        .kmewt {
+            width: 190px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .trainghiemnews ul li a img {
+            margin: 0 10px 0 0;
+        }
+
+        .sukiengame {
+            width: 100%;
+            float: left;
+            margin-top: 10px;
+            background: #efefef;
+            border: 1px solid #e5e4e4;
+            position: relative;
+        }
+
+            .sukiengame .left {
+                background: url(sprite20150608.png) -76px -143px;
+                width: 120px;
+                height: 50px;
+                float: left;
+                line-height: 50px;
+            }
+
+                .sukiengame .left h5 {
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: bold;
+                    margin-left: 5px;
+                }
+
+                .sukiengame .left span {
+                    color: #ff8301;
+                    margin-left: 5px;
+                }
+
+            .sukiengame p {
+                font-size: 17px;
+                color: #363636;
+                line-height: 22px;
+                margin-left: 130px;
+                margin-top: 9px;
+                margin-right: 65px;
+            }
+
+        .dongsukiengame {
+            float: left;
+            width: 100%;
+            margin-top: 20px;
+            border-left: 1px solid #ddd;
+        }
+
+            .dongsukiengame .right {
+                background: #f5f5f5;
+                width: 100%;
+                margin-left: 1px;
+                border-bottom: 1px solid #e5e4e4;
+                border-right: 1px solid #e5e4e4;
+            }
+
+        .menu-dong {
+            height: 27px;
+            float: left;
+            background: #46ad63;
+            width: 100%;
+            margin-top: 3px;
+        }
+
+        .dong-Game {
+            float: left;
+            margin: -8px 8px 0 -2px;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .sprite {
+            width: 145px;
+            height: 35px;
+            margin: -8px 8px 0 -2px;
+            background: url(../img/sprite20150608.png) no-repeat;
+        }
+
+        .link2 {
+            color: #ffffff;
+            font: 13px"UTM Bebas";
+            padding: 5px 11px !important;
+        }
+
+            .link2:hover {
+                color: #ffffff;
+                background: #3C9054;
+            }
+
+        .link3 {
+            color: #3C9054;
+            font-size: 13px;
+            font-family: Arial;
+        }
+
+            .link3:hover {
+                color: #D5474C;
+            }
+
+        .conten-dong {
+            float: left;
+            margin-top: 17px;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            scrollbar-color: #d5d4d4 transparent;
+            scrollbar-width: thin;
+        }
+
+        #myDIV {
+            height: 150px;
+            width: 690px;
+            overflow: auto;
+        }
+
+        #content {
+            float: left;
+            width: 3000px;
+            padding-left: 10px;
+        }
+
+        .newsupdate {
+            width: 100%;
+            float: left;
+            margin-top: 20px;
+        }
+
+            .newsupdate h2.top {
+                font-size: 14px;
+                font-weight: bold;
+                float: left;
+                width: 100%;
+                background: #c6c5c5;
+                height: 35px;
+            }
+
+                .newsupdate h2.top a {
+                    color: #fff;
+                    width: 137px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 35px;
+                    background: #d21a32;
+                    float: left;
+                }
+
+            .newsupdate ul li {
+                border: 1px solid #ededed;
+                background: #f4f3f3;
+                margin-top: 15px;
+                position: relative;
+            }
+
+                .newsupdate ul li a {
+                    color: #393838;
+                    font-size: 20px;
+                    font-family: Tahoma;
+                }
+
+                    .newsupdate ul li a:hover {
+                        color: #ED484A;
+                    }
+
+        .boxhomevideo {
+            width: 100%;
+        }
+
+        .knswli-title {
+            color: #222;
+            margin-bottom: 15px;
+            font-size: 30px !important;
+            line-height: 36px;
+            font-weight: bold !important;
+        }
+
+        .newsupdate ul li h3 {
+            font-size: 20px;
+            font-weight: normal;
+            margin: 7px 15px 0;
+        }
+
+            .newsupdate ul li h3 a {
+                font-size: 30px;
+                color: #393838;
+            }
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        #livideohome {
+            border-top: 1px solid #ebebeb !important;
+            border-bottom: 1px solid #ebebeb !important;
+            border: none;
+            background: none;
+        }
+
+
+
+
+
+        .contentleft .breadcumb {
+            width: 100%;
+            height: 33px;
+            line-height: 33px;
+        }
+
+        .breadcumb i {
+            width: 5px;
+            float: left;
+            background: #ed4848;
+            height: 33px;
+        }
+
+        .breadcumb a.category {
+            color: #8c8d8c;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 8px 15px;
+            background: #eae9e9;
+            text-transform: uppercase;
+        }
+
+        .breadcumb ol li {
+            background: #eae9e9;
+            float: left;
+        }
+
+        .topdetail {
+            float: left;
+            width: 100%;
+        }
+
+            .topdetail h1 {
+                font-size: 30px;
+                font-weight: bold;
+                color: #2b2a2a;
+                float: left;
+                margin-top: 15px;
+            }
+
+            .topdetail p {
+                float: left;
+                width: 100%;
+                font-size: 13px;
+                color: #666464;
+            }
+
+        .mgt15 {
+            margin-top: 15px;
+        }
+
+        .fon9 {
+            color: #666464;
+        }
+
+        .author {
+            color: #ed4848;
+            font-weight: bold;
+        }
+
+        .topdetail .liketop {
+            background: #f2f1f1;
+            border: 1px solid #e7e5e5;
+            width: 673px;
+            float: left;
+            margin-top: 15px;
+            padding: 8px 0 8px 15px;
+            height: 20px;
+        }
+
+        .linkhay20 {
+            display: block;
+            background-position: -416px -66px;
+            width: 78px;
+            height: 20px;
+        }
+
+        .col-md-3 p.namebox {
+            color: #ed4848;
+            font-size: 13px;
+            font-weight: bold;
+            border-top: 3px solid #ec5f5f;
+            float: left;
+            border-bottom: 1px solid #dad9d9;
+            padding: 8px 0 8px 10px;
+            width: 160px;
+        }
+
+        .col-md-3 ul li {
+            float: left;
+            width: 100%;
+            padding: 10px 0 15px 0;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #dad9d9;
+        }
+
+            .col-md-3 ul li p a.top {
+                font-size: 13px;
+                color: #fff;
+                font-weight: bold;
+                background: #4ea566;
+                float: left;
+                padding: 5px 10px;
+                width: 150px;
+            }
+
+            .col-md-3 ul li span {
+                background-position: -34px -15px;
+                width: 20px;
+                height: 15px;
+                float: left;
+                margin: 5px 7px 0 0;
+            }
+
+        .detailbt {
+            width: 100%;
+            float: left;
+            margin-top: 20px;
+        }
+
+            .detailbt p.top {
+                border-left: 5px solid #ed4848;
+                width: 675px;
+                height: 44px;
+                line-height: 44px;
+                font-weight: bold;
+                color: #4e4d4d;
+                font-size: 20px;
+                padding-left: 10px;
+                background: #eae9e9;
+            }
+
+
+        .link-source-wrapper {
+            width: auto;
+            display: block;
+            box-sizing: border-box;
+            position: relative;
+            padding-top: 15px;
+            z-index: 30;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .link-source-name {
+            font: 600 12px/14px Arial;
+            color: #888 !important;
+            box-sizing: border-box;
+            background: #F2F2F2;
+            border-radius: 100px;
+            padding: 9px 11px;
+            display: inline-block;
+        }
+
+        .social-share {
+            border: 1px solid #d6d6d6;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 481px;
+        }
+
+        .logoGamekfb {
+            display: block;
+            float: left;
+            margin-right: 8px;
+            background: url(../img/sprite20150608.png) -558px -366px;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+    <meta charset="utf-8" />
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/tinymce/tinymce.css">
+    
+</head>
+<body>
+    <div class="wp1000" style="height: 100% !important;">
+        <div class="header">
+            <div class="sharetop">
+                <a href="https://www.facebook.com/" target="_bank" class="facebook"><i class="fa fa-facebook-f" style="font-size:20px;color:red"></i></a>
+                <a href="https://www.youtube.com/" target="_bank" class="youtube"><i class="fa fa-youtube" style="font-size:20px;color:red"></i></a>
+                <a href="" class="rss"><i class="fa fa-rss" style="font-size:20px;color:red"></i></a>
+            </div>
+            <div class="menu">
+
+                <ul class="nav justify-content-star">
+                    <li class="imagelogo" onclick="http://localhost:61267">
+                        <a href="http://localhost:61267/"></a>
+                    </li>
+                    <li class="nav-item item">
+                        <a class="nav-link link" href="http://localhost:61267/en/game-mobile/" title="GAME MOBILE">GAME MOBILE</a>
+                    </li>
+                    <li class="nav-item item">
+                        <a class="nav-link link" href="http://localhost:61267/en/esport/" title="eSPORT">ESPORT</a>
+                    </li>
+                    <li class="nav-item item">
+                        <a class="nav-link link" href="#" title="KHÁM PHÁ">KHÁM PHÁ</a>
+                    </li>
+                    <li class="nav-item item">
+                        <a class="nav-link link" href="#" title="MANGA/FLIM">MANGA/FLIM</a>
+                    </li>
+                    <li class="nav-item item">
+                        <a class="nav-link link" href="#" title="Tin tức game">TIN TỨC</a>
+                    </li>
+                    <li class="nav-item item">
+                        <a class="nav-link link" href="#" title="Cộng đồng mạng">CỘNG ĐỒNG</a>
+                    </li>
+                    <li class="nav-item search1">
+                        <form class="form-inline">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 130px;border-radius: 10px;margin-top: 12px;">
+                            <a href="" class="btsearch" onclick=""><i class="fa fa-search" style="font-size:15px;"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="menunews" id="navbar" style="z-index:1 !important;">
+                <div id="submenu">
+                    <ul class="nav justify-content-star">
+                        <li class="nav-item item1">
+                            <a href="" style="padding: 20px 10px;" title="Home gameK"><img src="https://gamekcdn.com/web_images/home2424.png" alt="Home GameK" style="padding-top:10px"></a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="Call of duty">CALL OF DUTY</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="Liên minh huyền thoại">LMHT</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="GAMING GEAR">GAMING GEAR</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="TIN ONLINE">TIN ONLINE</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="PC/CONSOLE">PC/CONSOLE</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="VIDEO">VIDEO</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="main">
+                    <ul class="nav justify-content-star">
+                        <li class="nav-item item1" style="background-color: #ba3a3a;">
+                            <a href="" style="padding: 20px 10px;" title="Home gameK"><img src="https://gamekcdn.com/web_images/home2424.png" alt="Home GameK" style="padding-top:10px"></a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="GAME MOBILE">GAME MOBILE</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="eSPORT">ESPORT</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="KHÁM PHÁ">KHÁM PHÁ</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="FLIM/MANGA">FILM/MANGA</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="TIN TỨC">TIN TỨC</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="CỘNG ĐỒNG">CỘNG ĐỒNG</a>
+                        </li>
+                        <li class="nav-item item1">
+                            <a href="" class="nav-link link1" title="VIDEO">VIDEO</a>
+                        </li>
+                        <li class="nav-item search1" style="padding-left: 100px;">
+                            <form class="form-inline">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 150px;border-radius: 10px;margin-top: 1px;">
+                                <a href="" class="btsearch" onclick="" style="margin-top: -10px;"><i class="fa fa-search" style="font-size:15px;margin-left: 20px;"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+        @RenderBody()
+
+    </div>
+
+    <footer>
+        <div style="width: 100%;">
+            <div class="footer fl">
+                <div class="bottom_menu">
+                    <div class="wp980-mauto">
+                        <ul class="nav justify-content-star">
+                            <li class="nav-item item1">
+                                <a href="" class="nav-link link1" title="TRANG CHỦ">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item item1">
+                                <a href="" class="nav-link link1" title="TIN ONLINE">TIN ONLINE</a>
+                            </li>
+                            <li class="nav-item item1">
+                                <a href="" class="nav-link link1" title="THI TRƯỜNG">THỊ TRƯỜNG</a>
+                            </li>
+                            <li class="nav-item item1">
+                                <a href="" class="nav-link link1" title="PC CONSOLE">PC CONSOLE</a>
+                            </li>
+                            <li class="nav-item item1">
+                                <a href="" class="nav-link link1" title="eSPORT">eSPORT</a>
+                            </li>
+                            <li class="nav-item item1">
+                                <a href="" class="nav-link link1" title="GAME MOBILE">GAME MOBILE</a>
+                            </li>
+                            <li class="nav-item item1">
+                                <a href="" class="nav-link link1" title="RSS GameK">RSS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="wp980-mauto">
+                        <div class="left_info">
+                            <a rel="nofollow" href="http://www.vccorp.vn" title="Công ty Cổ phần VCCorp" target="_blank">
+                                <img src="https://vccorp.mediacdn.vn/vccorp-s.png" alt="Công ty cổ phần VCCorp" class="mb10">
+                            </a>
+                            <p>
+                                <br>
+                                © Copyright 2007 - 2020 – <b>Công ty Cổ phần VCCorp</b><br>
+                                Tầng 17, 19, 20, 21 Toà nhà Center Building - Hapulico Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.<br>
+                                Giấy phép thiết lập trang thông tin điện tử tổng hợp trên internet số 3634/GP-TTĐT do Sở <br> Thông tin và Truyền thông TP Hà Nội cấp ngày 06/09/2017
+
+                            </p>
+                        </div>
+                        <div class="center_info">
+                            <h6>Ban biên tập GameK:</h6>
+                            <p>
+                                Tầng 21, Tòa nhà Center Building - Hapulico Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.
+                                <br>Điện thoại: 024.7309.5555 Máy lẻ 41301 <br> Email: <a href="mailto:info@gamek.vn" rel="nofollow"><span style="color: #FD8002;">info@gamek.vn</span></a>
+                                <br>Chịu trách nhiệm quản lý nội dung: Bà Nguyễn Bích Minh
+                                <br>VPĐD tại TP.HCM: Tầng 6 Tòa nhà 123
+                                <br>123 Võ Văn Tần, phường 6, quận 3, Tp. HCM
+                            </p>
+                        </div>
+                        <div class="right_info">
+                            <p>
+                                <span>Liên hệ quảng cáo:</span>
+                                <span style="color: #FD8002;">Admicro</span>
+                                <br>Hotline hỗ trợ quảng cáo: 0942 86 11 33
+                                <br>Email: giaitrixahoi@admicro.vn
+                                <br><strong>Hỗ trợ &amp; CSKH: Admicro</strong>
+
+                                <br>Address: Tầng 20, Tòa nhà Center Building - Hapulico Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.
+                            </p>
+                            <a rel="nofollow" href="https://www.messenger.com/t/152595292913" title="Xem chi tiết" target="_blank" class="btn-messenger-lightbox">
+                                <span class="messenger-icon">
+                                    <svg width="12" height="12" viewBox="0 0 12 12">
+                                        <path d="M2.185,12.001 C2.522,11.817 2.845,11.639 3.154,11.468 C3.463,11.298 3.772,11.134 4.081,10.977 C4.147,10.940 4.226,10.914 4.320,10.900 C4.414,10.887 4.503,10.889 4.587,10.907 C5.261,11.046 5.926,11.085 6.582,11.025 C7.237,10.965 7.884,10.801 8.521,10.533 C9.410,10.155 10.136,9.626 10.698,8.948 C11.260,8.269 11.640,7.533 11.836,6.739 C12.033,5.945 12.033,5.132 11.836,4.301 C11.640,3.470 11.223,2.709 10.586,2.016 C10.155,1.545 9.694,1.157 9.202,0.853 C8.710,0.548 8.195,0.324 7.657,0.181 C7.118,0.038 6.561,-0.024 5.985,-0.006 C5.409,0.013 4.812,0.110 4.194,0.285 C3.669,0.433 3.184,0.629 2.740,0.873 C2.295,1.118 1.901,1.411 1.559,1.753 C1.217,2.095 0.927,2.485 0.688,2.923 C0.450,3.362 0.269,3.849 0.148,4.384 C0.026,4.920 -0.021,5.428 0.007,5.908 C0.035,6.388 0.129,6.847 0.288,7.286 C0.447,7.724 0.674,8.142 0.969,8.539 C1.264,8.936 1.613,9.315 2.016,9.675 C2.063,9.712 2.103,9.767 2.135,9.841 C2.168,9.915 2.185,9.979 2.185,10.035 C2.194,10.358 2.196,10.679 2.192,10.997 C2.187,11.316 2.185,11.651 2.185,12.001 L2.185,12.001 ZM5.304,4.107 C5.585,4.357 5.861,4.604 6.132,4.848 C6.404,5.093 6.685,5.345 6.975,5.603 C7.415,5.363 7.865,5.118 8.324,4.869 C8.783,4.620 9.246,4.370 9.715,4.121 C9.724,4.130 9.731,4.137 9.736,4.142 C9.741,4.147 9.748,4.154 9.757,4.163 C9.495,4.440 9.235,4.712 8.977,4.980 C8.720,5.248 8.462,5.518 8.205,5.790 C7.947,6.062 7.689,6.330 7.432,6.593 C7.174,6.856 6.919,7.122 6.666,7.390 C6.395,7.140 6.121,6.891 5.844,6.642 C5.568,6.392 5.285,6.143 4.994,5.894 C4.554,6.134 4.102,6.379 3.639,6.628 C3.175,6.877 2.709,7.131 2.241,7.390 C2.241,7.381 2.231,7.367 2.213,7.348 C2.475,7.071 2.735,6.796 2.992,6.524 C3.250,6.252 3.507,5.979 3.765,5.707 C4.023,5.435 4.280,5.165 4.538,4.897 C4.795,4.629 5.051,4.366 5.304,4.107 L5.304,4.107 L5.304,4.107 Z" fill="#fff"></path>
+                                    </svg>
+                                </span>
+                                Chat với tư vấn viên
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script type="text/javascript" src="~/tinymce/gamek.js"></script>
+</body>
+</html>

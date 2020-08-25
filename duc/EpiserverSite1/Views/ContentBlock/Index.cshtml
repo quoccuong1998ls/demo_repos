@@ -1,0 +1,24 @@
+﻿@model EpiserverSite1.Models.Blocks.ContentBlock
+
+
+<div class="container" style="padding-left:0;">
+    <h2>@Html.PropertyFor(x => x.Header)</h2>
+    <p>
+        @*<img class="pull-left img-responsive" src="@Model.Image" width="600px" height="600px" />*@
+        @Html.PropertyFor(x => x.Description)
+    </p>
+    <p class="clearfix"><a href="@Url.ContentUrl(Model.Link)" style="font-size:22px;font-family:'Times New Roman';color: #004370;">&#8811; @Html.DisplayFor(x => x.Link)</a></p>
+</div>
+<div class="link-source-wrapper">
+    <a class="link-source-name" title="Theo Pháp luật và bạn đọc " rel="nofollow" href="javascript:void(0);">
+        Theo <span class="link-source-text-name"> Pháp luật và bạn đọc </span>
+
+        <span class="btn-copy-link-source2">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 2.08333C2.38949 2.08333 2.28351 2.12723 2.20537 2.20537C2.12723 2.28351 2.08333 2.38949 2.08333 2.5V8.33333C2.08333 8.44384 2.12723 8.54982 2.20537 8.62796C2.28351 8.7061 2.38949 8.75 2.5 8.75H7.5C7.61051 8.75 7.71649 8.7061 7.79463 8.62796C7.87277 8.54982 7.91667 8.44384 7.91667 8.33333V2.5C7.91667 2.38949 7.87277 2.28351 7.79463 2.20537C7.71649 2.12723 7.61051 2.08333 7.5 2.08333H6.66667C6.43655 2.08333 6.25 1.89679 6.25 1.66667C6.25 1.43655 6.43655 1.25 6.66667 1.25H7.5C7.83152 1.25 8.14946 1.3817 8.38388 1.61612C8.6183 1.85054 8.75 2.16848 8.75 2.5V8.33333C8.75 8.66485 8.6183 8.9828 8.38388 9.21722C8.14946 9.45164 7.83152 9.58333 7.5 9.58333H2.5C2.16848 9.58333 1.85054 9.45164 1.61612 9.21722C1.3817 8.9828 1.25 8.66485 1.25 8.33333V2.5C1.25 2.16848 1.3817 1.85054 1.61612 1.61612C1.85054 1.3817 2.16848 1.25 2.5 1.25H3.33333C3.56345 1.25 3.75 1.43655 3.75 1.66667C3.75 1.89679 3.56345 2.08333 3.33333 2.08333H2.5Z" fill="#aaa"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.91666 1.25C2.91666 0.789762 3.28976 0.416667 3.75 0.416667H6.25C6.71023 0.416667 7.08333 0.789762 7.08333 1.25V2.08333C7.08333 2.54357 6.71023 2.91667 6.25 2.91667H3.75C3.28976 2.91667 2.91666 2.54357 2.91666 2.08333V1.25ZM6.25 1.25H3.75V2.08333H6.25V1.25Z" fill="#aaa"></path>
+            </svg>
+            <i>Copy link</i>
+        </span>
+    </a>
+</div>

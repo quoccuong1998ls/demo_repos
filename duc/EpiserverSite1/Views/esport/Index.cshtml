@@ -1,0 +1,167 @@
+﻿@*@model EpiserverSite1.Models.Pages.esport*@
+@{
+    Layout = "~/Views/Shared/_root.cshtml";
+
+}
+
+
+@using EPiServer.Core
+@using EpiserverSite1.Models.Pages
+@model EpiserverSite1.Models.ViewModels.esportViewModel
+
+
+
+<div class="container" style="padding-left:0;padding-right:0;">
+    <div class="row">
+        <div class="contentleft">
+
+            @{
+                var a = Model.listPage.ElementAt(0);
+                var b = Model.listPage.ElementAt(1);
+
+                <div class="row row_newer d-none d-md-flex" style="margin-top:20px;margin-bottom:20px;">
+                    <div class="col-12 col-md-7">
+                        <a href="@Url.ContentUrl(a.LinkURL)">
+                            <img src="@Url.ContentUrl(a.TeaserImage)" width="100%" height="262">
+                        </a>
+                        <div class="card-img-overlay" style="top:120px;background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#e34b4b 100%);width:390px;margin-left:17px;">
+                            <h5 class="card-title">
+                                <a href="@Url.ContentUrl(a.LinkURL)" class="tt">
+                                    @a.Name
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <a href="@Url.ContentUrl(b.LinkURL)">
+                            <img src="@Url.ContentUrl(b.TeaserImage)" width="100%" height="262">
+                        </a>
+                        <div class="card-img-overlay" style="top:100px;background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#26a216 100%);width:270px;margin-left:17px;">
+                            <h5 class="card-title">
+                                <a href="@Url.ContentUrl(b.LinkURL)" class="tt" style="padding:0;">
+                                    @b.Name
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            }
+
+            @for (int i = 2; i < Model.listPage.Count(); i++)
+            {
+
+                @*<h3>@Html.PageLink(item) <small>by @item.CreatedBy</small></h3>
+                <a href="@Url.ContentUrl(item.LinkURL)"><img src="@Url.ContentUrl(item.TeaserImage)" /></a>*@
+
+
+
+
+
+
+                <div class="card mb-3" style="max-width: 690px;height:200px; border:1px solid #ededed;background:#f4f3f3;">
+                    <div class="row no-gutters" style="color:#000000;">
+                        <div style="width:310px;">
+                            <a href="@Url.ContentUrl(Model.listPage.ElementAt(i).LinkURL)">
+                                <img class="pull-left img-responsive" src="@Url.ContentUrl(Model.listPage.ElementAt(i).TeaserImage)" width="310" height="200" />
+                            </a>
+                        </div>
+                        <div style="flex:0 0 370px;">
+                            <div class="card-body" style="padding:10px;">
+                                <a href="@Url.ContentUrl(Model.listPage.ElementAt(i).LinkURL)" style="color:#393838">
+                                    <h5 class="card-title" @Html.EditAttributes(x => Model.listPage.ElementAt(i).Name)>@Model.listPage.ElementAt(i).Name</h5>
+                                </a>
+                                <p class="card-text" style="font-size:13px;" @Html.EditAttributes(x => Model.listPage.ElementAt(i).TeaserText)>@Model.listPage.ElementAt(i).TeaserText</p>
+                                <p class="card-text"><small class="text-muted">@Html.DisplayFor(x => Model.listPage.ElementAt(i).Category) | @Model.listPage.ElementAt(i).Created</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="contentright">
+            <div id="nav"><img src="~/tinymce/katakuri.png" alt="..." /></div>
+        </div>
+    </div>
+</div>
+@*<div class="container" style="padding-left:0;padding-right:0;">
+
+
+    <div class="row">
+        <div class="contentleft">
+
+            <div class="wptopleft">
+                <div class="card" style="border:none;">
+
+                </div>
+
+
+            </div>
+
+            <div class="wptopright">
+
+                <div class="card" style="border:none;">
+
+                </div>
+            </div>
+            <div class="newsupdate">*@
+
+
+<!-- block content goes here -->
+@*@Html.PropertyFor(x => x.MainContentArea)*@
+
+@*<div class="card" style="max-width: 690px;border:1px solid #ffffff">
+        <ul class="card mb-3" style="max-width: 6900px;padding:0;margin:0;border:none;">
+            <li class="row no-gutters">
+                <a class="col-md-5" href="">
+                    <img src="..." class="card-img" alt="...">
+                </a>
+                <a class="col-md-7" href="">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </a>
+            </li>
+            <li class="row no-gutters">
+                <a class="col-md-5" href="">
+                    <img src="..." class="card-img" alt="...">
+                </a>
+                <a class="col-md-7" href="">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </a>
+            </li>
+            <li class="row no-gutters">
+                <a class="col-md-5" href="">
+                    <img src="..." class="card-img" alt="...">
+                </a>
+                <a class="col-md-7" href="">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </a>
+            </li>
+
+            <li class="row no-gutters">
+                <a class="col-md-5" href="">
+                    <img src="..." class="card-img" alt="...">
+                </a>
+                <a class="col-md-7" href="">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </a>
+            </li>
+            <li class="row no-gutters">
+                <a class="col-md-5" href="">
+                    <img src="..." class="card-img" alt="...">
+                </a>
+                <a class="col-md-7" href="">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </a>
+            </li>
+        </ul>
+    </div>*@
+@*</div>
+            </div>
+        </div>
+    </div>*@
